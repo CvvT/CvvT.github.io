@@ -1,0 +1,12 @@
+---
+title: "KOOBE: Towards Facilitating Exploit Generation of Kernel Out-Of-Bounds Write Vulnerabilities"
+collection: publications
+permalink: /publication/2020-10-01-usenix_chen
+excerpt: 'In this paper, we investigate another top memory vulnerability in Linux kernel—out-of-bounds (OOB) memory write from heap. We design KOOBE to assist the analysis of such vulnerabilities.'
+date: 2020-10-01
+venue: '29th USENIX Security Symposium '
+paperurl: 'http://CvvT.github.io/files/usenix20_koobe.pdf'
+---
+The monolithic nature of modern OS kernels leads to a constant stream of bugs being discovered. It is often unclear which of these bugs are worth fixing, as only a subset of them may be serious enough to lead to security takeovers (ie, privilege escalations). Therefore, researchers have recently started to develop automated exploit generation techniques (for UAF bugs) to assist the bug triage process. In this paper, we investigate another top memory vulnerability in Linux kernel—out-of-bounds (OOB) memory write from heap. We design KOOBE to assist the analysis of such vulnerabilities based on two observations:(1) Surprisingly often, different OOB vulnerability instances exhibit a wide range of capabilities.(2) Kernel exploits are multi-interaction> in nature (ie, multiple syscalls are involved in an exploit) which allows the exploit crafting process to be modular. Specifically, we focus on the extraction of capabilities of an OOB vulnerability which will feed the subsequent exploitability evaluation process. Our system builds on several building blocks, including a novel capability-guided fuzzing solution to uncover hidden capabilities, and a way to compose capabilities together to further enhance the likelihood of successful exploitations. In our evaluation, we demonstrate the applicability of KOOBE by exhaustively analyzing 17 most recent Linux kernel OOB vulnerabilities (where only 5 of them have publicly available exploits), for which KOOBE successfully generated candidate exploit strategies for 11 of them (including 5 that do not even have any CVEs assigned). Subsequently from these strategies, we are able to construct fully working exploits for all of them.
+
+[Download paper here](http://CvvT.github.io/files/usenix20_koobe.pdf)
